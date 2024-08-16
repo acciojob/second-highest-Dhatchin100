@@ -9,10 +9,20 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			
-
-
-  
+			if(arr.length==0) return -Infinity;
+			arr.sort((a,b)=>{
+				return b-a;
+			})
+		    let numberOfOnes=0
+			arr.forEach(function (element) {
+				if(element==1){
+					numberOfOnes++
+				}
+			})
+			if(numberOfOnes==arr.length){
+				return -Infinity;
+			}
+			return arr[1];
 			
 		}
 
